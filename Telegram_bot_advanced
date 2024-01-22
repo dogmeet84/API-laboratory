@@ -1,0 +1,7 @@
+import telebot
+token = '6732744643:AAE2YO6jsMyO44_lTKsz6JuvhOeq3MfTXvk'
+bot = telebot.TeleBot(token)
+@bot.message_handler(content_types=["text"])
+def echo(message):
+    bot.reply_to(message, f' Я "Эхо-бот", не хочу тебя передразнивать, но 😉:\n{message.text}')
+bot.polling(none_stop=True)
