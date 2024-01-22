@@ -1,0 +1,9 @@
+import telebot
+token = '6732744643:AAE2YO6jsMyO44_lTKsz6JuvhOeq3MfTXvk'
+bot = telebot.TeleBot(token)
+@bot.message_handler(content_types=["text"])
+def echo(message):
+    bot.send_message(message.chat.id, message.text)
+bot.polling(none_stop=True)
+
+#bot is called https://t.me/Needed_bridge_bot
