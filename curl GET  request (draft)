@@ -1,0 +1,1 @@
+curl -X GET -H "X-Auth-Token: AYj3IbiJ8hGFz9Po5bSXB0jKc02MApBw" "https://romashka3.ktalk.ru/api/users/scan?top=3"
