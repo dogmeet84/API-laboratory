@@ -1,2 +1,2 @@
 curl -X GET -H "X-Auth-Token: q2tu5kxvXx8NMl5OdEz5i1hwEdngquag" "https://romashka3.ktalk.ru/api/users/scan?top=3"
-# - Это самый свежий API ключ (07.02.24)
+# q2tu5kxvXx8NMl5OdEz5i1hwEdngquag - Это самый свежий API ключ (07.02.24)
