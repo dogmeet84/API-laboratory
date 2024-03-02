@@ -1,0 +1,20 @@
+from matplotlib import pyplot as plt
+import random
+
+result = [0] * 13
+x = list(range(2,13))
+
+for i in range (100000):
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    summ = dice1 + dice2
+    result[summ] += 1
+
+result.pop(0)
+result.pop(0)
+
+plt.plot(x, result)
+plt.ylabel('Сколько раз выпало')
+plt.xlabel('Сумма на кубиках')
+
+plt.show()
