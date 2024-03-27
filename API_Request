@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import codecs
 
-api_key = '___' # передаём апи-ключ в качестве параметра заголовка
+api_key = 'q2tu5kxvXx8NMl5OdEz5i1hwEdngquag' # передаём апи-ключ в качестве параметра заголовка
 url = 'https://romashka3.ktalk.ru/api/domain/recordings' # эндпоинт для получения списка записей
 hdrs = {'X-Auth-Token' : api_key}
 response = rq.get(url, headers=hdrs)
