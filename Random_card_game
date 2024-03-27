@@ -1,0 +1,27 @@
+from random import choice as ch
+
+print('Welcome, gambler!')
+print('I will give you a card and you will guess')
+
+card_number = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Qeen', 'King', 'Ace']
+card_suit = ['of Hearts', 'of Diamonds', 'of Clubs', 'of Spades']
+#red = ['of Hearts', 'of Diamonds']
+#black = ['of Clubs', 'of Spades']
+
+random_card = ch(card_number)
+random_suit = ch(card_suit)
+
+print(input('Make a guess my friend '))
+
+print(random_card, random_suit)
+
+if random_suit == 'of Hearts':
+    print ('Red')
+elif random_suit == 'of Diamonds':
+    print ('Red')
+elif random_suit == 'of Clubs':
+    print ('Black')
+elif random_suit == 'of Spades':
+    print ('Black')
+else:
+    print ('Тут могла бы быть ваша реклама')
