@@ -1,0 +1,17 @@
+import requests as rq
+import json
+import pandas as pd
+import codecs
+
+api_key = '___' # передаём апи-ключ в качестве параметра заголовка
+url = 'https://romashka3.ktalk.ru/api/domain/recordings' # эндпоинт для получения списка записей
+hdrs = {'X-Auth-Token' : api_key}
+response = rq.get(url, headers=hdrs)
+if response.status_code == 200:
+    # получение ответа в формате JSON
+    recordings = response.json()
+
+# вывод полученных данных
+print(json.dumps(recordings, indent=4))
+else:
+print('Ошибка при получении записей: ', response.status_code)
