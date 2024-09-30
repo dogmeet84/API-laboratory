@@ -1,2 +1,4 @@
 curl -X GET -H "X-Auth-Token: pYS3wPhimSzxIUr5AsF6A5eha6Q3GZBb" "https://romashka3.ktalk.ru/api/users/scan?top=3"
 # pYS3wPhimSzxIUr5AsF6A5eha6Q3GZBb - Это самый свежий API ключ (30.09.24)
+
+ curl -X GET -H "X-Auth-Token: pYS3wPhimSzxIUr5AsF6A5eha6Q3GZBb" "https://link-test5.ktalk.ru/api/Domain/stats/online" #статистика онлайн пользователей  
