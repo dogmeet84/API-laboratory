@@ -1,0 +1,38 @@
+import requests
+from datetime import timedelta
+import time
+import telebot
+
+# Установите ваши токены
+API_TOKEN = 'pYS3wPhimSzxIUr5AsF6A5eha6Q3GZBb'
+TELEGRAM_TOKEN = '1764312058:AAHBLjI0PCyMBUT1q13LQFaRLk6ANKGBAlY'
+CHAT_ID = '1173103746'
+
+# Создаем объект для работы с Telegram ботом
+bot = telebot.TeleBot(TELEGRAM_TOKEN)
+
+
+def send_message(text):
+    bot.send_message(CHAT_ID, text)
+
+
+while True:
+    try:
+        # Отправляем HTTP GET запрос к вашему API
+        response = requests.get('https://link-test5.ktalk.ru/api/Domain/stats/online',
+                                headers={'X-Auth-Token': API_TOKEN})
+
+        if response.status_code == 200:
+            # Получаем результат запроса и отправляем его в виде сообщения в ваш чат
+            data = response.json()
+            message = f'Статистика онлайн:\n{data}'
+            send_message(message)
+
+        else:
+            print(f'Ошибка при получении данных: {response.status_code}')
+
+    except Exception as e:
+        print(f'Непредвиденная ошибка: {e}')
+
+    # Ждем 5 минут перед следующим запросом
+    time.sleep(300)
